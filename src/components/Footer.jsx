@@ -6,21 +6,22 @@ const Footer = () => {
     <footer>
       <div>
         <h5>Hit us up on our socials!</h5>
-        <div>
-          <a href="https://www.devmountain.com" target="_blank">
+        <div className="socials">
+          <a href="https://www.devmountain.com" target="_blank" className="circle">
             <ImFacebook size="1.5em" color="#3f3f3f" />
           </a>
-          <a href="https://www.devmountain.com" target="_blank">
+          <a href="https://www.devmountain.com" target="_blank" className="circle">
             <ImInstagram size="1.5em" color="#3f3f3f" />
           </a>
-          <a href="https://www.devmountain.com" target="_blank">
+          <a href="https://www.devmountain.com" target="_blank" className="circle">
             <ImTwitter size="1.5em" color="#3f3f3f" />
           </a>
-          <a href="https://www.devmountain.com" target="_blank">
+          <a href="https://www.devmountain.com" target="_blank" className="circle">
             <ImGithub size="1.5em" color="#3f3f3f" />
           </a>
         </div>
       </div>
+      {/* <div> */}
       <svg
         width="110"
         height="110"
@@ -37,6 +38,7 @@ const Footer = () => {
           stroke-linejoin="round"
         />
       </svg>
+      {/* </div> */}
     </footer>
   );
 };

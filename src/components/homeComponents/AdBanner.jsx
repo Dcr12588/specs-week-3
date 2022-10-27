@@ -12,11 +12,11 @@ const AdBanner = () => {
           rgba(0, 0, 0, 0.8)),
           url(${salmon})`,
         backgroundSize: "cover",
-        height: 450,
+        height: 350,
       }}
     >
       <div class="header">
-        <h3>New Recipe</h3>
+        <h3 class="NewRec">New Recipe</h3>
         <h1 class="PS-Homepage">Pineapple Salmon</h1>
         <h3>
           This recipe consists of fresh wild Alaskan salmon, rubbed in a bbq

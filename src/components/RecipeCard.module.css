@@ -1,0 +1,17 @@
+.recipe_name {
+    display: flex;
+    justify-content:center;
+    margin-top: 500px;
+    color: red;
+    position: fixed;
+}
+
+.recipe_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 100px;
+    color: red;
+    margin-top: auto;
+}
