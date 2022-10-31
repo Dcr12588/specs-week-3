@@ -11,15 +11,15 @@ const RecipeCard = ({recipe}) => {
   }
 
 return (
-<div className="recipe_card">
-  <div className="recipe_img">
-    {/* <img src= "src/img/steak.jpeg" alt="steak"/> */}
-  </div>
-  <div className="recipe_name">
-    <h7>Steak and Potatoes</h7>
-  </div>
-    <button>See More</button>
-</div>
+<div className={styles.recipe_card}>
+      <div>
+        <div className={styles.recipe_img_container}>
+          <img src={recipe.image_url} />
+        </div>
+        <h3>{recipe.recipe_name}</h3>
+      </div>
+      <button className="blue-btn" onClick={handleClick}>See More</button>
+    </div>
 );
 };
 
