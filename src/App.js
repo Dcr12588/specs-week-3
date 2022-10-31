@@ -1,23 +1,26 @@
 import "./App.css";
+import axios from "axios";
+import {useState, useEffect} from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import {Routes, Route} from "react-router-dom"
-import HomeScreen from "./components/homeComponents/HomeScreen"
-import NewRecipeScreen from "./components/newRecipeComponents/NewRecipeScreen"
-import DetailScreen from "./components/detailComponents/DetailScreen"
+import {Routes, Route} from "react-router-dom";
+import HomeScreen from "./components/homeComponents/HomeScreen";
+import NewRecipeScreen from "./components/newRecipeComponents/NewRecipeScreen";
+import DetailScreen from "./components/detailComponents/DetailScreen";
 
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Routes>
+  <Header />
+  <main>
+    <Routes>
       <Route index element = {<HomeScreen/>} />
       <Route path = "newRecipe" element = {<NewRecipeScreen/>}/>
       <Route path = "recipeDetails" element = {<DetailScreen/>}/>
-      </Routes>
-      {/* This is where you will code for some of Part 1. */}
-      <Footer />
+    </Routes>
+  </main>
+  <Footer />
     </div>
   );
 }
