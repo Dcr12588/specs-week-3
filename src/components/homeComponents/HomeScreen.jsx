@@ -1,35 +1,31 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import AdBanner from './AdBanner'
+import RecipeContainer from './RecipeContainer'
 import axios from 'axios'
-import {useEffect} from "react"
-// import RecipeCard from "./components/RecipeCard"
 
-const HomeScreen = () => {  
+const HomeScreen = () => {
+  const [recipes, setRecipes] = useState([])
+  const url = 'https://recipes.devmountain.com'
 
-useEffect(() => {
   const getRecipes = () => {
     axios
-    .get(`https://recipes.devmountain.com/recipes`)
-    .then((res) => {
-      console.log(res.data)
-      getRecipes(res.data)
-  });
-};
+      .get(`${url}/recipes`)
+      .then((res) => {
+        setRecipes(res.data)
+        console.log(res.data)
+      })
+  }
 
-    getRecipes();
-    },[]);
-
+  useEffect(() => {
+    getRecipes()
+  },[])
+  
   return (
     <div>
       <AdBanner />
-
-      <div className='input'>
-        <input className='cards__search' type='text' placeholder='🔍 Search for a Recipe...'>
-
-        </input>
-        </div>
+      <RecipeContainer recipes={recipes}/>
     </div>
   )
 }
 
-export default HomeScreen;
+export default HomeScreen
