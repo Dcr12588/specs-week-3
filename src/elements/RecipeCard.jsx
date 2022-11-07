@@ -7,7 +7,7 @@ const RecipeCard = ({recipe}) => {
   const navigate = useNavigate()
 
   const handleClick = () => {
-    navigate(`/recipe/${recipe.recipe_id}`)
+    navigate(`/recipeDetails/${recipe.recipe_id}`)
   }
   return (
     <div className={styles.recipe_card}>
